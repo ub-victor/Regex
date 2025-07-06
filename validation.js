@@ -15,7 +15,7 @@ function Validation(field, regex){
 
 inputs.forEach((input)=>{
     input.addEventListener("keyup", (e)=>{
-        console.log(e.target.attributes.name.value);
+        //console.log(e.target.attributes.name.value);
         validate(e.target["telephone"])
     })
 })
