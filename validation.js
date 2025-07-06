@@ -6,4 +6,6 @@ const patterns = {
     telephone: /^\d{10}$/
 }
 
-inputs
+inputs.forEach(()=>{
+    
+})
