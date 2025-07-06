@@ -12,10 +12,9 @@ function validate(field, regex){
    // console.log(regex.test(field.value));// Check if the field value matches the regex pattern 
    if(regex.test(field.value)){
     field.className="valid";
-    const p = document.getElementById('tel').style.color= "blue"
 
    }else{
-    field.className="invalid"
+    field.className="invalid";
    }
 }
 
