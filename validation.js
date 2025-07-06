@@ -5,7 +5,8 @@ const inputs = document.querySelectorAll('input');
 const patterns = {
     telephone: /^\d{10}$/,
     username: /^[a-z\d]{5,12}$/i,
-    password: /^[\w@-]{8-20}$/ // Alphanumeric characters, @, _, and - are allowed but not special characters like !, $, %, etc.
+    password: /^[\w@-]{8,20}$/, // Alphanumeric characters, @, _, and - are allowed but not special characters like !, $, %, etc. eg: password123
+    slug: /^[a-z\d-]{8,20}$/
 }
 
 //Validation function
