@@ -8,7 +8,7 @@ const patterns = {
 
 //Validation function
 
-function Validation(field, regex){
+function validation(field, regex){
    console.log(regex.test(field.value));
 }
 
@@ -16,6 +16,6 @@ function Validation(field, regex){
 inputs.forEach((input)=>{
     input.addEventListener("keyup", (e)=>{
         //console.log(e.target.attributes.name.value);
-        validate(e.target["telephone"])
+        validate(e.target, [e.target.attributes.name.value]);
     })
 })
