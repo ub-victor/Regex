@@ -26,10 +26,10 @@ input{
 
 
 /* Validation styles */
-.valid {
+input.valid {
     border-color: green;
 }
 
-.invalid {
+input.invalid {
     border-color: red;
 }
