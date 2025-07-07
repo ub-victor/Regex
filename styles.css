@@ -33,3 +33,25 @@ input.valid {
 input.invalid {
     border-color: red;
 }
+
+input + p { /* Paragraph that appears after the input is the one is getting style*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin: 0 10px;
+    color: orange;
+    opacity: 0;
+    height: 0;
+}
+
+input.valid + p {
+    opacity: 1;
+    height: auto; /* This will allow the paragraph to expand */
+    color: green;
+}
+
+input.invalid + p {
+    opacity: 1;
+    height: auto; /* This will allow the paragraph to expand */
+    color: red;
+}
