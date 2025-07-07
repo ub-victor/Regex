@@ -23,3 +23,13 @@ input{
     outline: none !important;
 }
 
+
+
+/* Validation styles */
+.valid {
+    border-color: green;
+}
+
+.invalid {
+    border-color: red;
+}
