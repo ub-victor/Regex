@@ -5,8 +5,9 @@ const inputs = document.querySelectorAll('input');
 const patterns = {
     telephone: /^\d{10}$/,
     username: /^[a-z\d]{5,12}$/i,
-    password: /^[\w@-]{8,20}$/, // Alphanumeric characters, @, _, and - are allowed but not special characters like !, $, %, etc. eg: password123
-    slug: /^[a-z\d-]{8,20}$/
+    password: /^[\w@-]{8,20}$/, // Alphanumeric characters, @, _, and - are Example valid emails: user@example allowed but not special characters like !, $, %, etc. eg: password123
+    slug: /^[a-z\d-]{8,20}$/,
+    email:/^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/  // the + sign mean at least one character long but as many characters long as needed
 }
 
 //Validation function
@@ -32,3 +33,13 @@ inputs.forEach((input)=>{
         validate(e.target, patterns[e.target.attributes.name.value]); // the e.target = field and field.value = input value
     })
 })
+
+
+// For Email Regex
+/*
+    - Email must be in the format of local-part@domain
+    - Local-part: can contain letters, numbers, dots, hyphens, and underscores
+    - Domain: must contain at least one dot
+    - Example valid emails: user@example.com, user.name@example.co.uk
+    (yourname)@(domain).(extension)(.again)
+*/
